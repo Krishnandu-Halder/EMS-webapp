@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from '../../assets/logo.png'
 
 const Login = ({handleLogin}) => {
 
@@ -16,11 +17,15 @@ const Login = ({handleLogin}) => {
     }
 
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
+    <div>
+      <h1 className="text-5xl font-bold text-center mt-20   ">Employee Management System</h1>
+      <img src={logo} alt="logo" className="mx-auto mt-5 w-full md:w-1/2 lg:w-64 h-auto" />
+    <div className="flex h-screen w-screen items-center justify-center mt-[-250px]">
       <div className=" rounded-xl border-2 border-violet-500 p-20">
         <form onSubmit={(e)=>{
                 submitHandler(e);
             }}  className="flex flex-col items-center justify-center">
+
           <input
           id="email" name="email"
           value={email}
@@ -48,6 +53,7 @@ const Login = ({handleLogin}) => {
           </button>
         </form>
       </div>
+    </div>
     </div>
   );
 };
